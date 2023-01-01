@@ -31,20 +31,20 @@ void loop() {
   tempp = mlx.readObjectTempC();
   distance1 = getDistance(initPin1, echoPin1);
   distance2 = getDistance(initPin2, echoPin2);
-  if (tempp >= 30){
+  if (tempp >= 50){
     son1();
   }
-  if (distance1 <= 40){
-    son2();
-  }
-  if (distance1 <= 20){
-    son3();
-  }
-  if (distance2 <= 40){
+  if (distance1 <= 30){
     son4();
   }
-  if (distance2 <= 20){
+  if (distance1 <= 20){
     son5();
+  }
+  if (distance2 <= 30){
+    son2();
+  }
+  if (distance2 <= 20){
+    son3();
   }
 }
 int getDistance (int initPin, int echoPin){
